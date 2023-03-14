@@ -135,7 +135,7 @@ public class BusController {
 	public String login(@RequestParam("email") String email, @RequestParam("password") String password,
 			HttpSession session, Model m) {
 		
-		String admin="inmakesgoldtheatre@gmail.com";
+		String admin="your@gmail.com";
 		this.email=email;
 		String mail=(String) email;
 
@@ -330,7 +330,7 @@ public class BusController {
 				m.addAttribute("seats", seatNo1);
 				session.setAttribute("user", object);
 				session.setAttribute("msg", "your seat book successsfully");
-				message.setFrom("inmakesgoldtheatre@gmail.com");
+				message.setFrom("your@gmail.com");
 				message.setTo(email);
 				message.setSubject("Movie Ticket Booking Conformation - "+movieName+","+bdate+", "+btime+" "+bseats);
 				message.setText("Dear Customer,\n\nThank you for booking your movie ticket with us."
